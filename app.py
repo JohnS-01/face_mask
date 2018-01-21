@@ -8,8 +8,8 @@ app.config['SQLALCHEMY_ECHO'] = True
 
 db = SQLAlchemy(app)
 
-# @app.route('/')
-# def index():
-#     return 200
+@app.route('/')
+def index():
+    return "Hello!!"
 
 app.run()
