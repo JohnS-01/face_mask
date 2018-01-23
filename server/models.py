@@ -15,4 +15,8 @@ class User(db.Model):
 
     def __repr__(self):
         return f'(self.email)'
-    
+
+""" Test user was created in the db
+    Email:  test@test.com
+    Password:  cheese
+"""
