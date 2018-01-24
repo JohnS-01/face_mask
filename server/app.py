@@ -1,3 +1,5 @@
+""" App setup and database connection """
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -7,9 +9,3 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://face-mask:interface44#@
 app.config['SQLALCHEMY_ECHO'] = True
 
 db = SQLAlchemy(app)
-
-@app.route('/')
-def index():
-    return "Hello!!"
-
-app.run()
