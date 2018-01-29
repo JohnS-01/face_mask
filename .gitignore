@@ -58,3 +58,6 @@ venv.bak
 
 # https://github.com/github/gitignore/blob/master/Node.gitignore #
 # Repo of recommended Node.js .gitignore extensions #
+
+# node_modules #
+node_modules/
