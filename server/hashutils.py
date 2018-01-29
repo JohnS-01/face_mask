@@ -1,8 +1,9 @@
-""" Password Hashing Tools """
+""" Password & Cookie Hashing/Verification Tools """
 
 import string
 import random
 import hashlib
+import hmac
 
 def make_salt():
     """ Creates the salt that is tacked onto the end of the password to improve encryption. """
@@ -24,3 +25,19 @@ def check_pw_hash(password, hashy):
     if make_pw_hash(password, salt) == hash:
         return True
     return False
+
+TEMP_SECRET = 'HmtRej7yaEPB7FZ2'  # This will need to live somewhere else!!
+
+def hash_str(s):
+    """  """
+    return hmac.new(TEMP_SECRET, s).hexdigest()
+
+def make_secure_val(s):
+    """  """
+    return '%s|%s' % (s, hash_str(s))
+
+def check_secure_val(h):
+    """  """
+    s = h.split('|')[0]
+    if h == make_secure_val(s):
+        return s
