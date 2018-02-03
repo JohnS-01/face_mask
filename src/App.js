@@ -18,7 +18,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" checked="checked" />
+                <input type="radio" name="frequency" />
                  <label>
                   <span className='answer-num'>
                     1 = Not Dry
@@ -77,7 +77,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency2" checked="checked" />
+                <input type="radio" name="frequency2" />
                  <label>
                   <span className='answer-num'>
                     1 = Not Oily
@@ -136,7 +136,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency3" checked="checked" />
+                <input type="radio" name="frequency3" />
                  <label>
                   <span className='answer-num'>
                     1 = Not Inflamed
@@ -195,7 +195,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency4" checked="checked" />
+                <input type="radio" name="frequency4" />
                  <label>
                   <span className='answer-num'>
                     1 = Not Sensitive
@@ -254,7 +254,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency5" checked="checked" />
+                <input type="radio" name="frequency5" />
                  <label>
                   <span className='answer-num'>
                     1 = No Acne
@@ -323,7 +323,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency6" checked="checked" />
+                <input type="radio" name="frequency6" />
                  <label>
                   <span className='answer'>
                     No
@@ -352,7 +352,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency7" checked="checked" />
+                <input type="radio" name="frequency7"  />
                  <label>
                   <span className='answer'>
                     No
