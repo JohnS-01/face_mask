@@ -2,7 +2,7 @@
 #####################
 *.pyc
 *.pyo
-__pycache__/
+__pycache__
 *.py[cod]
 *$py.class
 
@@ -61,3 +61,4 @@ venv.bak
 
 # node_modules #
 node_modules/
+package-lock.json
