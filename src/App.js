@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-//import 'semantic-ui-css/semantic.min.css';
-//import { Button, Container, Header } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css';
+import { Button, Container, Header } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" checked="checked"/>
                  <label>
                   <span className='answer-num'>
                     1 = Not Dry
@@ -362,6 +362,11 @@ class App extends Component {
             </div>
           </div>
       </div>
+
+      <div className="ui button">
+        Submit
+      </div>
+
 </div>
     );
   }
