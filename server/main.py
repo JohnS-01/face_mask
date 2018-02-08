@@ -31,7 +31,8 @@ def login():
    # Checks user login information against the DB and logs them in if it's correct. 
     data = {
         'status' : 403, 
-        'message' : 'User not logged in.'
+        'message' : 'User not logged in.',
+        'verified' : False
     }
     resp = jsonify(data)
     resp.status_code = 403
@@ -56,7 +57,8 @@ def new_user():
     elif user and not check_pw_hash(password, user.pwd_hash):
         data = {
             'status' : 401,
-            'message' : 'Password is incorrect.'
+            'message' : 'Password is incorrect.',
+            'verified' : False
         }
         resp = jsonify(data)
         resp.status_code = 401
@@ -65,7 +67,8 @@ def new_user():
     else:
         data = {
             'status' : 401,
-            'message' : 'Email does not exist, please sign up.'
+            'message' : 'Email does not exist, please sign up.',
+            'verified' : False
         }
         resp = jsonify(data)
         resp.status_code = 401
@@ -85,7 +88,8 @@ def signup():
         if not result:
             data = {
                 'status' : 401,
-                'message' : 'That is not a valid email.'
+                'message' : 'That is not a valid email.',
+                'verified' : False
             }
             resp = jsonify(data)
             resp.status_code = 401
@@ -94,7 +98,8 @@ def signup():
         elif len(password) < 3 or len(password) > 20 or " " in password:
             data = {
                 'status' : 401,
-                'message' : 'That is not a valid password.'
+                'message' : 'That is not a valid password.',
+                'verified' : False
             }
             resp = jsonify(data)
             resp.status_code = 401
@@ -103,7 +108,8 @@ def signup():
         elif password != verify:
             data = {
                 'status' : 401,
-                'message' : 'Passwords do not match.'
+                'message' : 'Passwords do not match.',
+                'verified' : False
             }
             resp = jsonify(data)
             resp.status_code = 401
@@ -113,7 +119,8 @@ def signup():
             if User.query.filter_by(email=email).first() is not None:
                 data = {
                     'status' : 401,
-                    'message' : 'That email is already in use.'
+                    'message' : 'That email is already in use.',
+                    'verified' : False
                 }
                 resp = jsonify(data)
                 resp.status_code = 401
@@ -137,7 +144,8 @@ def signup():
                 return resp
     data = {
         'status' : 403, 
-        'message' : 'User not logged in.'
+        'message' : 'User not logged in.',
+        'verified' : False
     }
     resp = jsonify(data)
     resp.status_code = 403
@@ -150,7 +158,8 @@ def logout():
 
     data = {
         'status' : 403, 
-        'message' : 'User not logged in.'
+        'message' : 'User sucessfully logged out.',
+        'verified' : False
     }
     resp = jsonify(data)
     resp.status_code = 403
