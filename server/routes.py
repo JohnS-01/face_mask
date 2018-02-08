@@ -25,7 +25,7 @@ def bad_request(error):
 
 @app.route('/hello')
 def hello():
-    return "<h1>Hello World" #Python test endpoint
+    return "Hello World" #Python test endpoint
 
 @app.route('/', methods=['GET'])
 def index():
@@ -33,10 +33,12 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    pass
+    """
     if request.method == 'POST':
         usr = request.args.get("username")
         pwd = request.args.get("password")
-
+    """
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
