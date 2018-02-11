@@ -22,7 +22,7 @@
   conda list -e > requirements.txt
   ```
 1. To run the app locally, first clone this repository and `cd` into it.
-1. Create new virtual environment.
+2. Create new virtual environment.
 
   ```bash
   $ virtualenv venv
@@ -33,7 +33,7 @@
   conda create --name <environment-name>
   activate <environment-name>
   ```
-1. Install the requirments.
+3. Install the requirments.
 
   ```bash
   $ pip install -r requirments.txt
@@ -42,10 +42,10 @@
   ```bash
   conda install --yes --file requirements.txt
   ```
-1. Run the server
+4. Run the server
 
   ```bash
   $ python server/app.py
   ```
-1. Go to 127.0.0.1:5000/hello
+5. Go to 127.0.0.1:5000/hello
   Note: This is a python endpoint.
