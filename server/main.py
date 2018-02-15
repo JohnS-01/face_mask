@@ -133,7 +133,7 @@ def signup():
                 return resp
                 
             else:  # Create new user
-                new_user = User(email, make_pw_hash(password))
+                new_user = User(email=email, pwd_hash=make_pw_hash(password))
                 db.session.add(new_user)
                 db.session.commit()
                 session['email'] = email
