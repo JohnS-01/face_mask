@@ -1,12 +1,13 @@
 """ Main Controller """
 
-from flask import jsonify, request, redirect, make_response, url_for
+from flask import jsonify, request, redirect, make_response, url_for, render_template, abort
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.exc import IntegrityError
 
 from app import app, db, login_manager
 from models import User
+from utilities.hashutils import make_pw_hash, check_pw_hash
 
 
 #login_manager.login_view = 'login'
@@ -51,7 +52,7 @@ def login():
         post_data = request.get_json()
         user = User.query.filter_by(email=post_data["email"]).first()
         if user:
-            if check_password_hash(user.password, post_data["password"]):
+            if check_pw_hash(post_data["password"], user.password): #
                 login_user(user)
                 return jsonify({"redirect_url": request.args.get("next") or "/dashboard"}), 200
         else:
@@ -67,7 +68,7 @@ def login():
 def signup():
     """ Create a new user """
     post_data = request.get_json()
-    hashed_password = generate_password_has(post_data["password"], method='sha256')
+    hashed_password = make_pw_hash(post_data["password"])
     new_user = User(
         email = post_data["email"],
         password = hashed_password
@@ -95,7 +96,7 @@ def dashboard():
         'message': 'User does not exist'
     }
     try:
-        survey_data = Survey.query.filter_by(email=current_user.email).first()
+        # survey_data = Survey.query.filter_by(email=current_user.email).first()
         if not survey_data:
             return jsonify(response_object), 404
         else:
