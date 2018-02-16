@@ -57,6 +57,7 @@ def new_user():
             'verified' : True
         }
         resp = jsonify(data)
+        session['email'] = email
         resp.status_code = 200
         return resp
 
@@ -133,10 +134,10 @@ def signup():
                 return resp
                 
             else:  # Create new user
-                new_user = User(email=email, pwd_hash=make_pw_hash(password))
+                new_user = User(email=email, password=password)
                 db.session.add(new_user)
                 db.session.commit()
-                session['email'] = email
+                session['email'] = new_user.email
 
                 data = {
                     'email' : new_user.email, 
