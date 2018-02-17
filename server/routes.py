@@ -50,6 +50,7 @@ def login():
     """ Login user """
     if request.method == 'POST':
         post_data = request.get_json()
+        print(post_data)
         user = User.query.filter_by(email=post_data["email"]).first()
         if user:
             if check_pw_hash(post_data["password"], user.password): #
@@ -68,6 +69,7 @@ def login():
 def signup():
     """ Create a new user """
     post_data = request.get_json()
+    # print("data: ",post_data)
     hashed_password = make_pw_hash(post_data["password"])
     new_user = User(
         email = post_data["email"],
