@@ -41,7 +41,7 @@ def hello():
 @app.route('/', methods=['GET'])
 def index():
     """ React Home """
-    return render_template("index.html") 
+    return render_template("index.html")
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -51,45 +51,45 @@ def login():
         post_data = request.get_json()
         user = User.query.filter_by(email=post_data["email"]).first()
         if user:
-            if check_password_hash(user.password, post_data["password"]):
+            if check_password_hash(user.pwd_hash, post_data["password"]):
                 login_user(user)
                 return jsonify({"redirect_url": request.args.get("next") or "/dashboard"}), 200
         else:
             return abort(401)
     else:
         if current_user.is_authenticated:
-            return jsonify({"redirect_url": request.args.get("next") or "/dashboard"})    
+            return jsonify({"redirect_url": request.args.get("next") or "/dashboard"})
         else:
             return render_template('index.html')
-    
+
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     """ Create a new user """
     post_data = request.get_json()
-    hashed_password = generate_password_has(post_data["password"], method='sha256')
+    hashed_password = generate_password_hash(post_data["password"], method='sha256')
     new_user = User(
         email = post_data["email"],
-        password = hashed_password
+        pwd_hash = hashed_password
     )
     db.session.add(new_user)
-    
+
     try:
         db.session.commit()
     except IntegrityError:
         return jsonify(message="User with that email already exists"), 409
-    
+
     response_object = {
         'status': 'success',
         'message': '{email} was added!'
     }
     return jsonify(response_object), 201
-    
+
 
 @app.route('/dashboard', methods=['GET'])
 @login_required
 def dashboard():
-    """ Get single user details, pass survey data back """
+    """ Get single user details, pass survey data back
     response_object = {
         'status': 'fail',
         'message': 'User does not exist'
@@ -104,15 +104,19 @@ def dashboard():
                 'data': {
                     'todo': 'todo'
                 }
-                
+
             }
             return jsonify(response_object), 200
     except ValueError:
         return jsonify(response_object), 404
-    
+        """
 
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    response_object = {
+        'status': 'success',
+        'message': 'User has been logged out'
+        }
+    return jsonify(response_object), 200

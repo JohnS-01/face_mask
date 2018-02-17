@@ -1,6 +1,7 @@
-""" App Congfig """
+""" App Config """
 
 DEBUG = True #Keep on for debugging during development
-SQLAlchemy_DATABASE_URI = 'TODO'
+SQLALCHEMY_DATABASE_URI = 'TODO'
 SECRET_KEY = 'THISISABIGSECRET'
 SQLALCHEMY_ECHO = False
+SQLALCHEMY_TRACK_MODIFICATIONS = False

@@ -9,7 +9,7 @@ app.config.from_pyfile('config.py')
 db = SQLAlchemy()
 login_manager = LoginManager()
 
-# Set up extensions 
+# Set up extensions
 db.init_app(app)
 login_manager.init_app(app)
 
