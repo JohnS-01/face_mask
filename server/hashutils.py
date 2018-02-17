@@ -12,25 +12,16 @@ def make_pw_hash(password, salt=None):
     """ Creates the actual password hash with the salt included.
         Takes the entered password as a string.
         Takes an optional salt, also a string, which defaults to None. """
-    print("Password at start: ", password)
-    print("salt at start: ",salt)
     if not salt:
         salt = make_salt()
-        print("new salt: ",salt)
     new_hash = hashlib.sha256(str.encode(password + salt)).hexdigest()  # creates a unique user hash from the combined pw and salt
-    form_hash = '{0},{1}'.format(new_hash, salt)
-    print("new hash: ",form_hash)
-    return form_hash  #'{0},{1}'.format(new_hash, salt)  # returns the new hash, including the salt so user can be verified later
+    return '{0},{1}'.format(new_hash, salt)  # returns the new hash, including the salt so user can be verified later
 
 def check_pw_hash(password, hashy):
     """ Checks the entered password against the hash stored for the user in the DB.
         Takes the entered password as a string, and the original hash stored for the user. """
     salt = hashy.split(',')[1]  # gets the users original salt so that when it creates the new hash it will match
-    print("user password: ",password)
-    print("salt :",salt)
-    print("Original user hash: ",hashy)
     test_hash = make_pw_hash(password, salt)
-    print("Test hash:", test_hash)
     if test_hash == hashy:
         return True
     return False

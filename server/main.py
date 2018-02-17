@@ -24,7 +24,7 @@ def require_login():
         return redirect('/login')
 """
 
-# TODO : Add error handlers
+# TODO : Refactor error handlers
 
 @app.route('/login', methods=['GET'])
 def login():
@@ -42,14 +42,7 @@ def login():
 def new_user():
     email = request.form['email']
     password = request.form['password']
-    print(password)
     user = User.query.filter_by(email=email).first()
-    if user:
-        print("user exists")
-    else:
-        print("no user")
-    # print(check_pw_hash(password, user.pwd_hash))
-    # vs_pw = user.pwd_hash
     if user and check_pw_hash(password, user.pwd_hash):
         data = {
             'email' : email,
