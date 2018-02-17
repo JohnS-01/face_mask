@@ -118,5 +118,5 @@ def logout():
     response_object = {
         'status': 'success',
         'message': 'User has been logged out'
-        }
+        }        
     return jsonify(response_object), 200
