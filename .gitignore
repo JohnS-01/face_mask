@@ -2,7 +2,7 @@
 #####################
 *.pyc
 *.pyo
-__pycache__/
+__pycache__
 *.py[cod]
 *$py.class
 
@@ -64,3 +64,4 @@ node_modules/
 
 # Other #
 .vscode/
+package-lock.json
