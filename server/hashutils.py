@@ -1,4 +1,4 @@
-""" Password Hashing Tools """
+""" Password & Cookie Hashing/Verification Tools """
 
 import string
 import random
@@ -21,6 +21,8 @@ def check_pw_hash(password, hashy):
     """ Checks the entered password against the hash stored for the user in the DB.
         Takes the entered password as a string, and the original hash stored for the user. """
     salt = hashy.split(',')[1]  # gets the users original salt so that when it creates the new hash it will match
-    if make_pw_hash(password, salt) == hash:
+    test_hash = make_pw_hash(password, salt)
+    if test_hash == hashy:
         return True
     return False
+
