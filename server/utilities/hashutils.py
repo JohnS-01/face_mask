@@ -25,4 +25,3 @@ def check_pw_hash(password, hashy):
     if test_hash == hashy:
         return True
     return False
-

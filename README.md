@@ -10,19 +10,42 @@
 1. pip/conda install flask
 2. pip/conda install flask-sqlalchemy
 3. pip/conda install pymysql
-4. python server/main.py
-5. localhost:xxxx/home
+4. python server/app.py
+5. localhost:xxxx/hello
 
+#### If you add any packages to this project type, please update the requirements.txt
+  ```bash
+  $ pip freeze > requirements.txt
+  ```
+  #### With conda
+  ```bash
+  conda list -e > requirements.txt
+  ```
+1. To run the app locally, first clone this repository and `cd` into it.
+2. Create new virtual environment.
 
+  ```bash
+  $ virtualenv venv
+  $ source venv/bin/activate
+  ```
+  #### With conda
+  ```bash
+  conda create --name <environment-name>
+  activate <environment-name>
+  ```
+3. Install the requirments.
 
+  ```bash
+  $ pip install -r requirments.txt
+  ```
+  #### With conda
+  ```bash
+  conda install --yes --file requirements.txt
+  ```
+4. Run the server
 
-req:
-click==6.7
-Flask==0.12.2
-Flask-SQLAlchemy==2.3.2
-itsdangerous==0.24
-Jinja2==2.10
-MarkupSafe==1.0
-PyMySQL==0.8.0
-SQLAlchemy==1.2.2
-Werkzeug==0.14.1
+  ```bash
+  $ python server/app.py
+  ```
+5. Go to 127.0.0.1:5000/hello
+  Note: This is a python endpoint.
