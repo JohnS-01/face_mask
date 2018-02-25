@@ -1,4 +1,4 @@
-""" Password Hashing/Verification Tools """
+""" Password & Cookie Hashing/Verification Tools """
 
 import string
 import random
@@ -25,4 +25,3 @@ def check_pw_hash(password, hashy):
     if test_hash == hashy:
         return True
     return False
-

@@ -11,38 +11,31 @@ from models import User
 
 #login_manager.login_view = 'login'
 
-
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
 
 @login_manager.unauthorized_handler
 def unauthorized_callback():
     return redirect('/login?next=' + request.path)
 
-
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
-
 @app.errorhandler(400)
 def bad_request(error):
     return make_response(jsonify({'error': 'Bad request'}), 400)
-
 
 @app.route('/hello')
 def hello():
     """ Python Test Endpoint """
     return "Hello World" #Python test endpoint
 
-
 @app.route('/', methods=['GET'])
 def index():
     """ React Home """
     return render_template("index.html")
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -62,7 +55,6 @@ def login():
         else:
             return render_template('index.html')
 
-
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     """ Create a new user """
@@ -81,10 +73,9 @@ def signup():
 
     response_object = {
         'status': 'success',
-        'message': '{email} was added!'
+        'message': 'User was added!'
     }
     return jsonify(response_object), 201
-
 
 @app.route('/dashboard', methods=['GET'])
 @login_required
@@ -118,5 +109,5 @@ def logout():
     response_object = {
         'status': 'success',
         'message': 'User has been logged out'
-        }        
+        }
     return jsonify(response_object), 200
