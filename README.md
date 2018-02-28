@@ -9,6 +9,7 @@
 
 1. pip/conda install flask
 2. pip/conda install flask-sqlalchemy
+3. pip/conda install flask-login (for conda - 3rd pty lib is anaconda)
 3. pip/conda install pymysql
 4. python server/app.py
 5. localhost:xxxx/hello
