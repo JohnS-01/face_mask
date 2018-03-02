@@ -9,61 +9,16 @@ import {
   Link
 } from 'react-router-dom'
 
+//imports html/javascript from each page when their respective link is clicked
 import {Join} from './components/Pages/Join';
 import {Login} from './components/Pages/Login';
 import {Survey} from './components/Pages/Survey';
 
+//Home doesn't have a file in ./components/Pages sof the function is here
 const Home = () => (
   <div></div>
 )
 
-const SignUp = () => (
-  <div>
-    <h2>Sign Up</h2>
-  </div>
-)
-
-const LogIn= () => (
-  <div>
-    <h2>Log In</h2>
-  </div>
-)
-
-/*
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-)
-
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React TEST
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.path}/:topicId`} component={Topic}/>
-    <Route exact path={match.path} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
-  </div>
-)
-*/
 class App extends Component {
   render() {
     return (
@@ -71,6 +26,8 @@ class App extends Component {
       {/*Routing to connect hyper links to other pages */ }
       <Router>
         <div>
+          {/*Hyperlinks to click on to go to each page*/}
+          {/*Links need to be styled*/}
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/signup">Sign Up</Link></li>
@@ -86,7 +43,7 @@ class App extends Component {
           <Route path="/survey" component={Survey}/>
         </div>
       </Router>
-      
+
       <div className="ui form">
           {/* Question 1 */}
           <div className="inline fields">
