@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom'
 
 import {Join} from './components/Pages/Join';
+import {Login} from './components/Pages/Login';
+import {Survey} from './components/Pages/Survey';
 
 const Home = () => (
   <div></div>
@@ -73,15 +75,18 @@ class App extends Component {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/signup">Sign Up</Link></li>
             <li><Link to="/login">Log In</Link></li>
+            <li><Link to="/survey">Survey</Link></li>
           </ul>
 
           <hr/>
 
           <Route exact path="/" component={Home}/>
           <Route path="/signup" component={Join}/>
-          <Route path="/login" component={LogIn}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/survey" component={Survey}/>
         </div>
       </Router>
+      
       <div className="ui form">
           {/* Question 1 */}
           <div className="inline fields">
@@ -441,7 +446,9 @@ class App extends Component {
         Submit
       </div>
 
+
 </div>
+
     );
   }
 }
