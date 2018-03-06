@@ -11,8 +11,17 @@
 2. pip/conda install flask-sqlalchemy
 3. pip/conda install flask-login (for conda - 3rd pty lib is anaconda)
 3. pip/conda install pymysql
-4. python server/app.py
-5. localhost:xxxx/hello
+4. pip install flask-login
+5. python server/app.py
+6. localhost:xxxx/hello
+
+## Access to Database
+Go to http://www.phpmyadmin.co/
+
+Server: sql3.freemysqlhosting.net
+Username: sql3220832
+Password: BWP5Ed8RU8
+Port number: 3306
 
 #### If you add any packages to this project type, please update the requirements.txt
   ```bash
