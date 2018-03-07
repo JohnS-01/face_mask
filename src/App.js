@@ -43,7 +43,7 @@ class App extends Component {
           <Route path="/survey" component={Survey}/>
         </div>
       </Router>
-
+      {/*Start of survey. Eventually will be moved to survey page. */}
       <div className="ui form">
           {/* Question 1 */}
           <div className="inline fields">
