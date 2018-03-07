@@ -48,7 +48,7 @@ def login():
                 login_user(user)
                 return jsonify({"redirect_url": request.args.get("next") or "/dashboard"}), 200
         else:
-            return abort(401)
+            return "No!!"
     else:
         if current_user.is_authenticated:
             return jsonify({"redirect_url": request.args.get("next") or "/dashboard"})
