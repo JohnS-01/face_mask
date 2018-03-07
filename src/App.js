@@ -54,7 +54,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" value="1" name="dryness"/>
                  <label>
                   <span className='answer-num'>
                     1 = Not Dry
@@ -64,7 +64,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" value="2" name="dryness"/>
                  <label>
                   <span className='answer-num'>
                     2
@@ -74,7 +74,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" value="3" name="dryness"/>
                  <label>
                   <span className='answer-num'>
                     3
@@ -84,7 +84,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" value="4" name="dryness"/>
                  <label>
                   <span className='answer-num'>
                     4
@@ -94,7 +94,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" value="5" name="dryness"/>
                 <label>
                   <span className='answer-num'>
                     5 = Very Dry
@@ -113,7 +113,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency2" />
+                <input type="radio" name="frequency2" value="1" name="oiliness"/>
                  <label>
                   <span className='answer-num'>
                     1 = Not Oily
@@ -123,7 +123,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency2" />
+                <input type="radio" name="frequency2" value="2" name="oiliness"/>
                  <label>
                   <span className='answer-num'>
                     2
@@ -133,7 +133,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency2" />
+                <input type="radio" name="frequency2" value="3" name="oiliness"/>
                  <label>
                   <span className='answer-num'>
                     3
@@ -143,7 +143,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency2" />
+                <input type="radio" name="frequency2" value="4" name="oiliness"/>
                  <label>
                   <span className='answer-num'>
                     4
@@ -153,7 +153,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency2" />
+                <input type="radio" name="frequency2" value="5" name="oiliness"/>
                 <label>
                   <span className='answer-num'>
                     5 = Very Oily
@@ -172,7 +172,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency3" />
+                <input type="radio" name="frequency3" value="1" name="redness"/>
                  <label>
                   <span className='answer-num'>
                     1 = Not Inflamed
@@ -182,7 +182,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency3" />
+                <input type="radio" name="frequency3" value="2" name="redness"/>
                  <label>
                   <span className='answer-num'>
                     2
@@ -192,7 +192,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency3" />
+                <input type="radio" name="frequency3" value="3" name="redness"/>
                  <label>
                   <span className='answer-num'>
                     3
@@ -202,7 +202,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency3" />
+                <input type="radio" name="frequency3" value="4" name="redness"/>
                  <label>
                   <span className='answer-num'>
                     4
@@ -212,7 +212,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency3" />
+                <input type="radio" name="frequency3" value="5" name="redness"/>
                 <label>
                   <span className='answer-num'>
                     5 = Very Inflamed
@@ -231,7 +231,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency4" />
+                <input type="radio" name="frequency4" value="1" name="sensitivity"/>
                  <label>
                   <span className='answer-num'>
                     1 = Not Sensitive
@@ -241,7 +241,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency4" />
+                <input type="radio" name="frequency4" value="2" name="sensitivity"/>
                  <label>
                   <span className='answer-num'>
                     2
@@ -251,7 +251,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency4" />
+                <input type="radio" name="frequency4" value="3" name="sensitivity"/>
                  <label>
                   <span className='answer-num'>
                     3
@@ -261,7 +261,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency4" />
+                <input type="radio" name="frequency4" value="4" name="sensitivity"/>
                  <label>
                   <span className='answer-num'>
                     4
@@ -271,7 +271,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency4" />
+                <input type="radio" name="frequency4" value="5" name="sensitivity"/>
                 <label>
                   <span className='answer-num'>
                     5 = Very Sensitive
@@ -290,7 +290,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency5" />
+                <input type="radio" name="frequency5" value="1" name="acne"/>
                  <label>
                   <span className='answer-num'>
                     1 = No Acne
@@ -300,7 +300,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency5" />
+                <input type="radio" name="frequency5" value="2" name="acne"/>
                  <label>
                   <span className='answer-num'>
                     2
@@ -310,7 +310,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency5" />
+                <input type="radio" name="frequency5" value="3" name="acne"/>
                  <label>
                   <span className='answer-num'>
                     3
@@ -320,7 +320,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency5" />
+                <input type="radio" name="frequency5" value="4" name="acne"/>
                  <label>
                   <span className='answer-num'>
                     4
@@ -330,7 +330,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency5" />
+                <input type="radio" name="frequency5" value="5" name="acne"/>
                 <label>
                   <span className='answer-num'>
                     5 = Frequent Breakouts
@@ -349,7 +349,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency6" />
+                <input type="radio" name="frequency6" value="true" name="wrinkles"/>
                  <label>
                   <span className='answer'>
                     Yes
@@ -359,7 +359,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency6" checked="checked" />
+                <input type="radio" name="frequency6" checked="checked" value="false" name="wrinkles"/>
                  <label>
                   <span className='answer'>
                     No
@@ -378,7 +378,7 @@ class App extends Component {
               </label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency7" />
+                <input type="radio" name="frequency7" value="true" name="scarring"/>
                  <label>
                   <span className='answer'>
                     Yes
@@ -388,7 +388,7 @@ class App extends Component {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency7" checked="checked"/>
+                <input type="radio" name="frequency7" checked="checked" value="false" name="scarring"/>
                  <label>
                   <span className='answer'>
                     No
@@ -399,10 +399,9 @@ class App extends Component {
           </div>
       </div>
 
-      <div className="ui button">
+      <div className="ui button" type="submit" value="Submit">
         Submit
       </div>
-
 
 </div>
 
