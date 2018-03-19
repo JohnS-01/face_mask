@@ -31,12 +31,15 @@ class App extends Component {
       scarring: false
   }
 
+  /*function to allow changing values for text inputs
+    might not be need for radio buttons */
   change = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
+  /* For the sumbit button for the survey */
   onSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
