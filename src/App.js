@@ -23,7 +23,7 @@ class App extends Component {
 
   state = {
       dryness: "",
-      oilness: "",
+      oiliness: "",
       redness: "",
       sensitivity: "",
       acne: "",
@@ -77,7 +77,11 @@ class App extends Component {
                 </label>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency" value="1" name="dryness"/>
+                  <input
+                    type="radio"
+                    name="dryness"
+                    value="1"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       1 = Not Dry
@@ -87,7 +91,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency" value="2" name="dryness"/>
+                  <input
+                    type="radio"
+                    name="dryness"
+                    value="2"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       2
@@ -97,7 +105,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency" value="3" name="dryness"/>
+                  <input
+                    type="radio"
+                    name="dryness"
+                    value="3"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       3
@@ -107,7 +119,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency" value="4" name="dryness"/>
+                  <input
+                    type="radio"
+                      name="dryness"
+                      value="4"
+                      onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       4
@@ -117,7 +133,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency" value="5" name="dryness"/>
+                  <input
+                    type="radio"
+                    name="dryness"
+                    value="5"
+                    onChange={e => this.change(e)} />
                   <label>
                     <span className='answer-num'>
                       5 = Very Dry
@@ -136,7 +156,11 @@ class App extends Component {
                 </label>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency2" value="1" name="oiliness"/>
+                  <input
+                    type="radio"
+                    name="oiliness"
+                    value="1"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       1 = Not Oily
@@ -146,7 +170,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency2" value="2" name="oiliness"/>
+                  <input
+                    type="radio"
+                    name="oiliness"
+                    value="2"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       2
@@ -156,7 +184,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency2" value="3" name="oiliness"/>
+                  <input
+                    type="radio"
+                    name="oiliness"
+                    value="3"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       3
@@ -166,7 +198,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency2" value="4" name="oiliness"/>
+                  <input
+                    type="radio"
+                    name="oiliness"
+                    value="4"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       4
@@ -176,7 +212,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency2" value="5" name="oiliness"/>
+                  <input
+                    type="radio"
+                    name="oiliness"
+                    value="5"
+                    onChange={e => this.change(e)} />
                   <label>
                     <span className='answer-num'>
                       5 = Very Oily
@@ -195,7 +235,11 @@ class App extends Component {
                 </label>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency3" value="1" name="redness"/>
+                  <input
+                    type="radio"
+                    name="redness"
+                    value="1"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       1 = Not Inflamed
@@ -205,7 +249,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency3" value="2" name="redness"/>
+                  <input
+                    type="radio"
+                    name="redness"
+                    value="2"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       2
@@ -215,7 +263,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency3" value="3" name="redness"/>
+                  <input
+                    type="radio"
+                    name="redness"
+                    value="3"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       3
@@ -225,7 +277,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency3" value="4" name="redness"/>
+                  <input
+                    type="radio"
+                    name="redness"
+                    value="4"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       4
@@ -235,7 +291,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency3" value="5" name="redness"/>
+                  <input
+                    type="radio"
+                    name="redness"
+                    value="5"
+                    onChange={e => this.change(e)} />
                   <label>
                     <span className='answer-num'>
                       5 = Very Inflamed
@@ -254,7 +314,11 @@ class App extends Component {
                 </label>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency4" value="1" name="sensitivity"/>
+                  <input
+                    type="radio"
+                    name="sensitivity"
+                    value="1"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       1 = Not Sensitive
@@ -264,7 +328,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency4" value="2" name="sensitivity"/>
+                  <input
+                    type="radio"
+                    name="sensitivity"
+                    value="2"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       2
@@ -274,7 +342,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency4" value="3" name="sensitivity"/>
+                  <input
+                    type="radio"
+                    name="sensitivity"
+                    value="3"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       3
@@ -284,7 +356,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency4" value="4" name="sensitivity"/>
+                  <input
+                    type="radio"
+                    name="sensitivity"
+                    value="4"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       4
@@ -294,7 +370,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency4" value="5" name="sensitivity"/>
+                  <input
+                    type="radio"
+                    name="sensitivity"
+                    value="5"
+                    onChange={e => this.change(e)} />
                   <label>
                     <span className='answer-num'>
                       5 = Very Sensitive
@@ -313,7 +393,11 @@ class App extends Component {
                 </label>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency5" value="1" name="acne"/>
+                  <input
+                    type="radio"
+                    name="acne"
+                    value="1"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       1 = No Acne
@@ -323,7 +407,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency5" value="2" name="acne"/>
+                  <input
+                    type="radio"
+                    name="acne"
+                    value="2"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       2
@@ -333,7 +421,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency5" value="3" name="acne"/>
+                  <input
+                    type="radio"
+                    name="acne"
+                    value="3"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       3
@@ -343,7 +435,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency5" value="4" name="acne"/>
+                  <input
+                    type="radio"
+                    name="acne"
+                    value="4"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer-num'>
                       4
@@ -353,7 +449,11 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency5" value="5" name="acne"/>
+                  <input
+                    type="radio"
+                    name="acne"
+                    value="5"
+                    onChange={e => this.change(e)} />
                   <label>
                     <span className='answer-num'>
                       5 = Frequent Breakouts
@@ -372,7 +472,11 @@ class App extends Component {
                 </label>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency6" value="true" name="wrinkles"/>
+                  <input
+                    type="radio"
+                    name="wrinkles"
+                    value="true"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer'>
                       Yes
@@ -382,7 +486,12 @@ class App extends Component {
               </div>
               <div className="field">
                 <div className="ui radio checkbox">
-                  <input type="radio" name="frequency6" checked="checked" value="false" name="wrinkles"/>
+                  <input
+                    type="radio"
+                    name="wrinkles"
+                    checked="checked"
+                    value="false"
+                    onChange={e => this.change(e)} />
                    <label>
                     <span className='answer'>
                       No
