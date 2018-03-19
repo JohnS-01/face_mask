@@ -41,7 +41,7 @@ class App extends Component {
 
   /* For the sumbit button for the survey */
   onSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //stops JSON information from being posted to url
     console.log(this.state);
   }
 
