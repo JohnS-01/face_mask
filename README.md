@@ -1,6 +1,6 @@
 ## Face Mask
 
-##Steps to run front-end:
+## Steps to run front-end:
 
 1. npm install
 2. npm start
@@ -10,8 +10,7 @@
 1. pip/conda install flask
 2. pip/conda install flask-sqlalchemy
 3. pip/conda install flask-login (for conda - 3rd pty lib is anaconda)
-3. pip/conda install pymysql
-4. pip install flask-login
+4. pip/conda install pymysql
 5. python server/app.py
 6. localhost:xxxx/hello
 
