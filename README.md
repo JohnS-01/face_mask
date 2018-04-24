@@ -22,7 +22,7 @@ Username: sql3220832
 Password: BWP5Ed8RU8
 Port number: 3306
 
-#### If you add any packages to this project type, please update the requirements.txt
+#### If you add any packages to this project type, please update the requirements.txt (example in the following)
   ```bash
   $ pip freeze > requirements.txt
   ```
@@ -30,6 +30,8 @@ Port number: 3306
   ```bash
   conda list -e > requirements.txt
   ```
+ ## Steps to setup and run the backend with virtualenv.
+
 1. To run the app locally, first clone this repository and `cd` into it.
 2. Create new virtual environment.
 
