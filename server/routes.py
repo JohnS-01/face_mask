@@ -8,7 +8,6 @@ from sqlalchemy.exc import IntegrityError
 from app import app, db, login_manager
 from models import User
 
-
 #login_manager.login_view = 'login'
 
 @login_manager.user_loader
@@ -75,6 +74,7 @@ def signup():
 @app.route('/api/dashboard', methods=['GET'])
 @login_required
 def dashboard():
+    pass
     """ Get single user details, pass survey data back
     response_object = {
         'status': 'fail',
