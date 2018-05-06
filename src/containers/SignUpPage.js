@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { loginUser } from '../userApi';
+import { addUser } from '../userApi';
 import SignUpForm from '../components/pages/SignUpForm';
 
 class SignUpPage extends Component {
@@ -40,7 +40,7 @@ class SignUpPage extends Component {
       email: this.state.user.email,
       password: this.state.user.password
     };
-    loginUser(data);
+    addUser(data);
   };
 
   render(){

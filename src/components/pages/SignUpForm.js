@@ -48,7 +48,7 @@ const SignUpForm = (props) => (
               type='password'
             />
 
-            <Button color='teal' fluid size='large'>Login</Button>
+            <Button color='teal' fluid size='large'>Submit</Button>
           </Segment>
         </Form>
         <Message>

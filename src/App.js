@@ -4,8 +4,10 @@ import { Switch, Route } from 'react-router-dom';
 import LoginPage from './containers/LoginPage';
 import SignUpPage from './containers/SignUpPage';
 import HomePage from './components/pages/HomePage';
+import Logout from './components/pages/Logout';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import {logoutUser} from './userApi';
 
 class App extends Component {
     render() {
@@ -15,6 +17,11 @@ class App extends Component {
                   <Route exact path='/' component={HomePage}/>
                   <Route exact path='/login' component={LoginPage}/>
                   <Route exact path='/register' component={SignUpPage}/>
+                  <Route exact path='/logout' render={() => (
+                    <Logout
+                      logoutUser={logoutUser}
+                    />
+                  )}/>
                 </Switch>
                 <NavBar />
                 <Footer />
