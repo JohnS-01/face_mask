@@ -10,7 +10,7 @@ class User(UserMixin, db.Model):
     pwd_hash = db.Column(db.String(300))
 
 class Survey(db.Model):
-    """ This will hold information about indivudual survey results. """
+    """ This will hold information about individual survey results. """
     id = db.Column(db.Integer, primary_key=True)
     dryness = db.Column(db.Integer)
     oiliness = db.Column(db.Integer)
