@@ -11,8 +11,9 @@
 2. pip/conda install flask-sqlalchemy
 3. pip/conda install flask-login (for conda - 3rd pty lib is anaconda)
 4. pip/conda install pymysql
-5. python server/app.py
-6. localhost:xxxx/hello
+5. pip/conda install flask_cors
+6. python server/app.py
+7. localhost:xxxx/hello
 
 ## Access to Database
 Go to http://www.phpmyadmin.co/
