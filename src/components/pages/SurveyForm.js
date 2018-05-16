@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 
-class App extends Component {
+class Survey extends Component {
 
   state = {
       dryness: "",
@@ -521,4 +521,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Survey;
