@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 
+import { surveyData } from '../../userApi';
+//import SignUpForm from '../components/pages/SurveyForm';
+
 class Survey extends Component {
 
   state = {
@@ -25,6 +28,8 @@ class Survey extends Component {
   onSubmit = (e) => {
     e.preventDefault(); //stops JSON information from being posted to url
     console.log(this.state);
+
+    surveyData(this.state);
   }
 
   render() {
@@ -32,6 +37,9 @@ class Survey extends Component {
   <div className="App">
       <form onSubmit={this.handleSubmit}>
         {/*Start of survey. Eventually will be moved to survey page. */}
+        <br /> {/* Line breaks because of the menus is blocking the first question */}
+        <br />
+        <br />
         <div className="ui form">
             {/* Question 1 */}
             <div className="inline fields">
