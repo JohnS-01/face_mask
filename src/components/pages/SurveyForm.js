@@ -454,7 +454,6 @@ class Survey extends Component {
                   <input
                     type="radio"
                     name="wrinkles"
-                    checked="checked"
                     value="false"
                     onChange={e => this.change(e)} />
                    <label>
@@ -493,7 +492,6 @@ class Survey extends Component {
                   <input
                     type="radio"
                     name="scarring"
-                    checked="checked"
                     value="false"
                     name="scarring"
                     onChange={e => this.change(e)}/>
