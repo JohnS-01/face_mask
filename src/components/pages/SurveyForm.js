@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Container, Header } from 'semantic-ui-react'
-
-//Home doesn't have a file in ./components/Pages sof the function is here
-const Home = () => (
-  <div></div>
-)
 
 class App extends Component {
 
@@ -35,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-  <div classNameName="App">
+  <div className="App">
       <form onSubmit={this.handleSubmit}>
         {/*Start of survey. Eventually will be moved to survey page. */}
         <div className="ui form">
