@@ -29,9 +29,12 @@ export function logoutUser() {
     });
 }
 
-export function surveyData() {
-  return axios.get(`${url}/survey`)
+export function surveyData(postData) {
+  return axios.get(`${url}/survey`, postData)
     .then(response => {
       console.log(response)
+    })
+    .catch(error => {
+      console.log(error);
     });
 }
