@@ -28,3 +28,10 @@ export function logoutUser() {
       console.log(response)
     });
 }
+
+export function surveyData() {
+  return axios.get(`${url}/survey`)
+    .then(response => {
+      console.log(response)
+    });
+}
