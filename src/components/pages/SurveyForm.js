@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
 import 'semantic-ui-css/semantic.min.css';
 import { Button, Container, Header } from 'semantic-ui-react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-
-//imports html/javascript from each page when their respective link is clicked
-import {Join} from './components/Pages/Join';
-import {Login} from './components/Pages/Login';
-import {Survey} from './components/Pages/Survey';
 
 //Home doesn't have a file in ./components/Pages sof the function is here
 const Home = () => (
@@ -47,26 +36,6 @@ class App extends Component {
   render() {
     return (
   <div classNameName="App">
-      {/*Routing to connect hyper links to other pages */ }
-      <Router>
-        <div>
-          {/*Hyperlinks to click on to go to each page*/}
-          {/*Links need to be styled*/}
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/survey">Survey</Link></li>
-          </ul>
-
-          <hr/>
-
-          <Route exact path="/" component={Home}/>
-          <Route path="/signup" component={Join}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/survey" component={Survey}/>
-        </div>
-      </Router>
       <form onSubmit={this.handleSubmit}>
         {/*Start of survey. Eventually will be moved to survey page. */}
         <div className="ui form">
