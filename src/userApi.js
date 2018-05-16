@@ -30,7 +30,7 @@ export function logoutUser() {
 }
 
 export function surveyData(postData) {
-  return axios.get(`${url}/survey`, postData)
+  return axios.post(`${url}/survey`, postData)
     .then(response => {
       console.log(response)
     })
