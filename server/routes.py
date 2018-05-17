@@ -110,6 +110,8 @@ def survey():
     )
     db.session.add(survey_data)
 
+    db.session.commit()
+
     response_object = {
         'status': 'success',
         'message': 'Survey was added!'
