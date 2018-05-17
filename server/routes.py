@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.exc import IntegrityError
 
 from app import app, db, login_manager
-from models import User
+from models import User, Survey
 
 #login_manager.login_view = 'login'
 
@@ -95,6 +95,26 @@ def dashboard():
     except ValueError:
         return jsonify(response_object), 404
         """
+@app.route('/api/survey', methods=['GET', 'POST'])
+def survey():
+    post_data = request.get_json()
+
+    survey_data = Survey(
+        dryness = post_data["dryness"],
+        oiliness = post_data["oiliness"],
+        redness = post_data["redness"],
+        sensitivity = post_data["sensitivity"],
+        acne = post_data["acne"],
+        wrinkles = post_data["wrinkles"],
+        scarring = post_data["scarring"]
+    )
+    db.session.add(survey_data)
+
+    response_object = {
+        'status': 'success',
+        'message': 'Survey was added!'
+    }
+    return jsonify(response_object), 201
 
 @app.route('/api/logout')
 @login_required
