@@ -17,6 +17,7 @@ class Survey(db.Model):
     redness = db.Column(db.Integer)
     sensitivity = db.Column(db.Integer)
     acne = db.Column(db.Integer)
-    wrinkles = db.Column(db.Boolean, default=False)
-    scarring = db.Column(db.Boolean, default=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    wrinkles = db.Column(db.String(10), default='false') # Might change the survey True/False to 0/1 in front-end
+    scarring = db.Column(db.String(10), default='false') # Might change the survey True/False to 0/1 in front-end
+    date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
+    #user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
