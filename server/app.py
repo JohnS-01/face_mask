@@ -16,6 +16,11 @@ login_manager = LoginManager()
 db.init_app(app)
 login_manager.init_app(app)
 
+@app.route('/create')
+def create():
+	db.create_all()
+	return 'All tables created'
+
 from routes import *
 
 if __name__ == '__main__':
