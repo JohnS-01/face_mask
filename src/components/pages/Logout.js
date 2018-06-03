@@ -9,7 +9,13 @@ class Logout extends Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
+        <br />
         <p>You are now logged out. Click <Link to="/login">here</Link> to log back in.</p>
+        <br />
+        <br />
+        <br />
       </div>
     )
   };
