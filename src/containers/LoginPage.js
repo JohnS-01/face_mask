@@ -41,6 +41,8 @@ class LoginPage extends Component {
       password: this.state.user.password
     };
     loginUser(data);
+
+    this.props.history.push("/survey");
   };
 
   render(){

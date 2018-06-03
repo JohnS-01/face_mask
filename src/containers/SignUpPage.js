@@ -41,6 +41,7 @@ class SignUpPage extends Component {
       password: this.state.user.password
     };
     addUser(data);
+    this.props.history.push("/survey");
   };
 
   render(){
